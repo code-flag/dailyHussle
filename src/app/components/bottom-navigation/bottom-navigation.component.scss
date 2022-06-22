@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+ion-tab-bar {
+  background: var(--app-bgcolor-main);
+  ion-tab-button {
+    background-color: inherit;
+  }
+}
+#tab-button-dashboard {
+  .maintabIcon {
+    height: 28px;
+    width: 28px;
+  }
+}
+
+ion-icon {
+  height: 24px;
+  width: 24px;
+}
+app-icon {
+  font-size: 25px;
+  height: 25px
+}
+ion-label {
+    font-size: 10px;
+}
+.tab-selected {
+  padding: 0;
+  --color-selected: var(--app-icon-color-1);
+}
+
+@media screen and (min-width: 600px) {
+  ion-tab-bar {
+    padding: 10px;
+    height: 90px;
+  }
+  ion-tabs {
+    padding-bottom: 10px;
+    background: var(--app-dark-bgcolor);
+  }
+  ion-tab-button {
+    padding-top: 10px;
+  }
+  #tab-button-dashboard {
+    .maintabIcon {
+      height: 48px;
+      width: 48px;
+      &.tab-selected {
+        height: 50px;
+        width: 50px;
+        font-weight: bold;
+        padding: 0;
+        --color-selected: var(--app-yellow-color);
+      }
+    }
+  }
+
+  ion-icon {
+    height: 48px;
+    width: 48px;
+  }
+ 
+app-icon {
+    font-size: 40px;
+    height: 40px
+  }
+  ion-label {
+      font-size: 16px
+  }
+  .icon-label {
+    font-size: 16px;
+    padding: 2px;
+  }
+  .tab-selected {
+    padding: 0;
+    --color-selected: var(--app-yellow-color);
+    .icon-label {
+      font-size: 20px;
+    }
+  }
+}

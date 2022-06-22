@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Dailyhustle",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

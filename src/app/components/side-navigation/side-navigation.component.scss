@@ -1,0 +1,45 @@
+.my-custom-menu {
+    --width: 50vw;
+  }
+  
+    ion-content {
+      --background: var(--app-dark-color);
+      --color: #fff;
+      .menu-list {
+        --background: var(--app-dark-color);
+      --color: inherit;
+      }
+      ion-item {
+        --background: inherit;
+      --color: inherit;
+      }
+    }
+    ion-toolbar {
+     --background: var(--app-dark-color);
+      --color: #fff;
+    }
+    ion-menu-button {
+      --color: #fff;
+    }
+  
+    ion-label {
+      margin-left: 10px;
+    }
+  
+  app-font-icon {
+    color: var(--app-base-color);
+    font-size: 24px;
+  }
+  
+  .navbar-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  ion-router-outlet {
+    position: unset;
+    contain: unset;
+  }
+  

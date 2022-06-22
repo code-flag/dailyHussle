@@ -1,0 +1,83 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/* import remix icon */
+@import "./assets/icon/remix/remixicon.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+
+.dark-mode {
+  --app-bgcolor-main: rgb(5, 44, 56); // app main dark background color
+  --app-bgcolor-primary: #3a555ebe; // app normal page background color for
+  --app-bgcolor-secondary: #275c64f0; // app background after normal background color
+  --app-bgcolor-secondary-2: #43677c;
+  --app-bgcolor-tertiary: #2d6180e7; // app background color after secondary
+
+  --app-color-main: #b4d9e5;
+  --app-color-p1: #fff;
+  --app-color-p2: #eee;
+  --app-color-s1: #cfcfcf;
+  --app-color-s2: #c7c7c7;
+  --link-color: #c5ff15;
+
+  --app-icon-color-1: #df8a0a;
+  --app-icon-color-2: #b4d9e5;
+
+  --app-button-color-1: #b4d9e5; // app dark color
+  --app-button-color-2: #b4d9e559; // button color on dark background
+  --app-button-color-3: #df8a0a; // action button color
+
+  --app-button-color-4: rgb(5, 44, 56); // action button color
+  --app-button-color-5: #fff; // action button color
+  --box-shadow-color: #646060;
+}
+
+.light-mode {
+  --app-bgcolor-main: #b4d9e5; // app main dark background color
+  --app-bgcolor-primary: #fff; // app normal page background color for
+  --app-bgcolor-secondary: #e2f4ff; // app background after normal background color
+  --app-bgcolor-secondary-2: #e2f4ff;
+  --app-bgcolor-tertiary: #edf4fb; // app background color after secondary
+
+  --app-color-main: rgb(5, 44, 56);
+  --app-color-p1: #000;
+  --app-color-p2: rgb(18, 21, 26);
+  --app-color-s1: rgb(28, 28, 29);
+  --app-color-s2: #303030;
+
+  --link-color: rgb(56 181 201);
+
+  --app-icon-color-1: #000;
+  --app-icon-color-2: rgb(5, 44, 56);
+
+  --app-button-color-1: rgb(5, 44, 56); // app dark color
+  --app-button-color-2: #0f1d227e; // button color on light background
+  --app-button-color-3: #df8a0a; // action button color
+  --app-button-color-4: rgb(5, 44, 56); // action button color
+  --app-button-color-5: #fff; // action button color
+
+  --box-shadow-color: #ccc;
+}

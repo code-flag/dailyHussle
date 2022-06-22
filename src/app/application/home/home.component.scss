@@ -1,0 +1,276 @@
+.ion-content {
+  --background: var(--app-bgcolor-main);
+}
+.page-background-layer-1 {
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--app-bgcolor-primary);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden;
+}
+
+.header-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--app-bgcolor-main);
+  color: var(--app-color-p1);
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .welcome-info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+
+    h1 {
+      color: var(--app-color-p1);
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+    }
+  }
+
+  .intro-text {
+    color: var(--app-color-p1);
+    align-self: flex-start;
+    padding: 5px;
+    padding-top: 0;
+    margin-top: -2px;
+  }
+
+  ion-searchbar {
+    --background: var(--app-bgcolor-primary);
+    --icon-color: var(--app-color-p1);
+    --color: var(--app-color-p1);
+    --placeholder-color: var(--app-color-s2);
+    margin-bottom: 15%;
+    --border-radius: 40px;
+  }
+}
+.header-card {
+  position: relative;
+  width: 90%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  border-radius: 12px;
+  padding-top: 5px;
+  overflow: hidden;
+
+  .wrapper {
+    width: 100%;
+    min-height: 130px;
+    background: var(--app-bgcolor-secondary);
+    box-shadow: 0px 5px 25px 5px var(--box-shadow-color) inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 15px;
+
+    .caption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 5px;
+
+      .text {
+        color: var(--app-color-p1);
+        font-weight: bold;
+      }
+      .button {
+        align-self: flex-start;
+        margin-top: 10px;
+      }
+    }
+
+    .image {
+      border-radius: 50%;
+      position: relative;
+      top: 25px;
+      right: -39px;
+      overflow: hidden;
+      width: 249px;
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
+
+.main {
+  width: 90%;
+  position: relative;
+  overflow: scroll;
+
+  .category-wrapper {
+    width: 100%;
+    min-height: 15%;
+    padding: 20px;
+    padding-left: 0px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: grid;
+    grid-gap: 5px;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(35% - 0.5rem);
+
+    .small-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      .category {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: large;
+        font-weight: bold;
+        background-color: var(--app-bgcolor-main);
+        border: 2px solid var(--app-color-main);
+        color: var(--app-icon-color-2);
+        border-radius: 50%;
+        margin-bottom: 5px;
+
+        app-icon {
+          margin-top: 3px;
+        }
+      }
+      .m-active {
+        border: 2px solid var(--app-icon-color-1);
+        background-color: var(--app-bgcolor-main);
+        color: var(--app-icon-color-1);
+      }
+      .cat-title {
+        color: var(--app-color-p2);
+        font-size: small;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .recommendation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .caption {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10;
+      .text,
+      .dot {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--app-color-p1);
+      }
+    }
+
+    .card-list {
+      width: 100%;
+      padding: 20px;
+      padding-left: 0px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      display: grid;
+      grid-gap: 30px;
+      grid-auto-flow: column;
+      grid-auto-columns: calc(60% - 0.5rem);
+
+      .trend-card {
+        min-width: 195px;
+        min-height: 200px;
+        border-radius: 10px;
+        background-color: var(--app-color-main);
+        color: #000;
+
+        .card-image {
+          width: 100%;
+          height: 100px;
+          img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+        }
+
+        .card-info {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          padding: 15px;
+          .desc {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          .poster {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 5px;
+          }
+          .price-and-rating {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .price {
+              font-size: 16px;
+              font-weight: bold;
+              align-items: flex-start;
+              text-align: left;
+            }
+            .rating {
+              font-size: 12px;
+              font-weight: bold;
+              align-items: flex-end;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}

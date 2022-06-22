@@ -1,0 +1,42 @@
+<ion-tabs (ionTabsDidChange)="tabChanged($event)" #pageTabs class="light-mode">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button #pageTabOne [tab]="tabone?.link">
+      <app-icon iconType="remix" [iconName]="tabone?.icon" iconColor="primary-icon" iconSize="custom"></app-icon>
+      <span class="icon-label">{{ tabone?.name }}</span>
+    </ion-tab-button>
+
+    <ion-tab-button #pageTabTwo [tab]="tabtwo?.link" >
+      <app-icon iconType="remix" [iconName]="tabtwo?.icon " iconColor="primary-icon" iconSize="custom"></app-icon>
+      <span class="icon-label">{{ tabtwo?.name }}</span>
+    </ion-tab-button>
+
+    <ion-tab-button #pageTabMain [tab]="maintab?.link">
+      <ion-icon *ngIf="maintab?.icon" class="maintabIcon" [src]="maintab?.icon"></ion-icon>
+      <app-icon *ngIf="maintab?.icon2" iconType="remix" [iconName]="maintab?.icon2" iconColor="primary-icon" iconSize="custom"></app-icon>
+      <span class="icon-label">{{ maintab?.name }} </span>
+    </ion-tab-button>
+
+    <ion-tab-button #pageTabThree [tab]="tabthree?.link" >
+      <app-icon iconType="remix" [iconName]="tabthree?.icon" iconColor="primary-icon" iconSize="custom"></app-icon>
+      <span class="icon-label">{{ tabthree?.name }}</span>
+    </ion-tab-button>
+
+    <ion-tab-button #pageTabFour [tab]="tabfour?.link">
+      <ng-container
+        *ngIf="tabfour?.emptyProfile; then noProfileImg; else profileImg"
+      ></ng-container>
+
+      <ng-template #noProfileImg>
+        <app-icon iconType="remix" [iconName]="tabfour?.icon" iconColor="primary-icon" iconSize="custom"></app-icon>
+      </ng-template>
+      <ng-template #profileImg>
+        <ion-icon [src]="tabfour?.profileIcon"></ion-icon>
+      </ng-template>
+
+      <!-- <app-icon iconType="remix" [iconName]="tabfour?.icon" iconColor="primary-icon" iconSize="custom"></app-icon> -->
+
+      <!-- <ion-icon [name]="tabfour?.icon"></ion-icon> -->
+      <span class="icon-label">{{ tabfour?.name }}</span>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

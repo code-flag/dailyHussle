@@ -1,0 +1,91 @@
+<ion-content class="light-mode ion-content">
+   <div class="page-background-layer-1">
+    <div class="header-wrapper">
+        <div class="welcome-info">
+            <h1>Hi, Francis</h1>
+            <img src="../../../assets/avatar/avatar_nick.png" alt="user-image">
+        </div>
+        <div class="intro-text">
+            Finding something to do today?
+        </div>
+
+        <ion-searchbar showCancelButton="focus" autocomplete="on" placeholder="find what to do today"></ion-searchbar>
+    </div>
+
+    <div class="header-card">
+        <div class="wrapper">
+            <div class="caption">
+                <div class="text">We'll help you find suitable work today</div>
+                <div class="button">
+                    <app-button buttonClass="dark" buttonType="round" title="Let's Go"></app-button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="../../../assets/images/banner.jpg" alt="user-image">
+            </div>
+        </div>
+    </div>
+   <div class="main">
+    
+    <div class="category-wrapper">
+        <div *ngFor="let item of category">
+            <div class="small-card">
+                <div [class]="activeCat == item.id? 'category m-active' : 'category'">
+                    <app-icon iconType="remix" [iconName]="item?.icon" iconColor="primary-icon" iconSize="custom"></app-icon>
+                </div>
+                <div class="cat-title">{{item?.name}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recommendation">
+        <div class="caption">
+            <span class="text">Recommended</span>
+            <span class="dot">...</span>
+        </div>
+        <div class="card-list">
+            <div class="trend-card">
+                <div class="card-image">
+                    <img src="../../../assets/images/banner-2.jpg" alt="">
+                </div>
+                <div class="card-info">
+                    <span class="desc">Electrician</span>
+                    <span class="poster">By James Clerk</span>
+                    <div class="price-and-rating">
+                        <span class="price"># 2500/day</span>
+                        <span class="rating">4.4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trend-card">
+                <div class="card-image">
+                    <img src="../../../assets/images/banner.jpg" alt="">
+                </div>
+                <div class="card-info">
+                    <span class="desc">Electrician</span>
+                    <span class="poster">By James Clerk</span>
+                    <div class="price-and-rating">
+                        <span class="price"># 2500/day</span>
+                        <span class="rating">4.4</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trend-card">
+                <div class="card-image">
+                    <img src="../../../assets/images/banner-2.jpg" alt="">
+                </div>
+                <div class="card-info">
+                    <span class="desc">Electrician</span>
+                    <span class="poster">By James Clerk</span>
+                    <div class="price-and-rating">
+                        <span class="price"># 2500/day</span>
+                        <span class="rating">4.4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+   </div>
+</ion-content>

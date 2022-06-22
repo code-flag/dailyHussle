@@ -1,0 +1,73 @@
+<ion-content class="light-mode">
+  <div class="page-wrapper">
+    <div class="header-wrapper">
+      <div class="page-title">Todays Job</div>
+      <ion-searchbar
+        showCancelButton="focus"
+        autocomplete="on"
+        placeholder="find what to do today"
+      ></ion-searchbar>
+      <div class="filter-area">
+        <span>Filter By:</span>
+        <div class="filter">
+          <app-button
+            buttonClass="custom"
+            buttonType="round"
+            title="Title"
+          ></app-button>
+          <app-button
+            buttonClass="custom"
+            buttonType="round"
+            title="Location"
+          ></app-button>
+          <app-button
+            buttonClass="custom"
+            buttonType="round"
+            title="Wages"
+          ></app-button>
+          <app-button
+            buttonClass="custom"
+            buttonType="round"
+            title="Rating"
+          ></app-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="job-feed">
+      <div class="job-card" *ngFor="let job of jobs">
+        <div class="job-icon">
+          <app-icon
+            iconType="remix"
+            iconName="stack-line"
+            iconColor="custom"
+            iconSize="custom"
+          ></app-icon>
+        </div>
+        <div class="info-area">
+          <div class="title">{{job.title}}</div>
+          <div class="about">
+            {{job.about}}
+            <span class="link">read more</span>
+          </div>
+          <div class="author">
+            <div class="avatar">
+              <img [src]="job.avatar" alt="" />
+            </div>
+            <div class="name">{{job.poster_name}}</div>
+            <div class="rating">{{job.rating}}</div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="time">{{job.time}}</div>
+          <div class="location">{{job.location}}</div>
+          <div class="price">{{job.amount}}</div>
+        </div>
+      </div>
+
+      <!-- //create a space after scrolling -->
+
+      <div style="height: 350px;"></div>
+    </div>
+  </div>
+</ion-content>

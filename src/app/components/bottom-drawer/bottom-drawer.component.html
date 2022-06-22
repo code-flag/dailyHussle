@@ -1,0 +1,36 @@
+<ion-bottom-drawer #drawerElement
+  [(state)]="drawerStateMode"
+  [minimumHeight]="minimumHeight"
+  [dockedHeight]="dockedHeight"
+  [shouldBounce]="shouldBounce"
+  [distanceTop]="distanceTop"
+  [transition]="transitionEffect"
+>
+  <!-- 
+      replace div below with  the default header for drawer here.
+      The header must all be wrapped in a single div to indicate as header
+      -->
+       
+  <div class="back-btn">
+    <div class="drawer-close-icon" >
+      <app-font-icon iconType="remix" [iconName]="iconName" iconColor="app-base-color" iconSize="custom-shadow" (click)="closeDrawer()"></app-font-icon>
+    </div>
+   
+    <div class="drag-bar">
+      <span id="draggable">
+        <span class="bar"></span>
+      </span>
+    </div>
+    <span *ngIf="isCancelBtn" id="cancel-btn">
+      <ion-icon
+        (click)="cancelFunction()"
+        src="../../../assets/icon/cancel-btn.svg"
+      ></ion-icon>
+    </span>
+  </div>
+
+  <!--Drawer contents goes here -->
+  <div class="drawer-content">
+    <ng-content></ng-content>
+  </div>
+</ion-bottom-drawer>

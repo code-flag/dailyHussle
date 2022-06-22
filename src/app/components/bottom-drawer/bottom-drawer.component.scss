@@ -1,0 +1,215 @@
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+// $primaryColor: #e47819;
+// $insetColor: #E5E4E2;
+// $insetColor1: #D3D3D3;
+$insetColor2: #cccccc;
+// $secondaryColor: #eda15f;
+// $borderBottom: 0.1px inset $insetColor;
+// $borderTop: 0.1px solid $insetColor;
+// $activeTabBold: 1px solid $primaryColor;
+
+// body {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+//     font-family: 'Open sans', sans-serif;
+
+// }
+ion-bottom-drawer {
+  --background: transparent !important;
+  background-color: transparent;
+  z-index: 500100;
+
+  // box-shadow: 0px 31px 44px 10px rgb(148, 147, 147);
+}
+
+ion-bottom-drawer ion-content {
+  --background: transparent !important;
+  box-shadow: 0px 31px 44px 10px rgb(148, 147, 147);
+}
+
+ion-content {
+  --background: transparent !important;
+  overflow-y: scroll;
+}
+#background-content {
+  background: transparent;
+}
+
+.drawer-close-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin-bottom: -32px;
+  
+  app-font-icon {
+    background-color: #fff;
+    color: var(--app-base-color);
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    padding-top: 0;
+ 
+  }
+}
+
+.back-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  background-color: transparent;
+}
+.drag-bar {
+  background-color: #fff;
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  padding: 40px;
+}
+#cancel-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  background-color: transparent;
+  color: #ccc;
+  margin-top: -75px;
+
+  ion-icon {
+    border-radius: 50%;
+  }
+}
+
+#draggable {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  .bar {
+    width: 45%;
+    border-radius: 3px;
+    height: 0.23rem;
+    background-color: $insetColor2;
+  }
+}
+
+.drawer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  row-gap: 1.2rem;
+  background-color: white;
+  left: 0;
+  z-index: 11;
+  min-height: 92%;
+  width: 100%;
+  padding: 0.7rem 0 0;
+  overflow-y: auto;
+}
+
+
+/* tablet stylings */
+
+@media screen and (min-width: 600px) {
+
+  ion-bottom-drawer {
+    --background: transparent !important;
+    background-color: transparent;
+  }
+
+  ion-bottom-drawer ion-content {
+    --background: transparent !important;
+    box-shadow: 0px 31px 44px 10px rgb(148, 147, 147);
+  }
+
+  ion-content {
+    --background: transparent !important;
+  }
+
+  #background-content {
+    background: transparent;
+  }lo
+
+  .back-btn {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    border-radius: 30px 30px 0 0;
+    width: 100%;
+    background-color: transparent;
+  }
+  .drawer-close-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin-bottom: -64px;
+    
+    app-font-icon {
+      background-color: #fff;
+      color: var(--app-base-color);
+      width: 130px;
+      height: 130px;
+      font-size: 80px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+      padding-top: 0;
+   
+    }
+  }
+
+  #cancel-btn {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    background-color: transparent;
+    color: #ccc;
+    margin-top: -75px;
+  
+    ion-icon {
+      border-radius: 50%;
+    }
+  }
+
+  #draggable {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+
+    .bar {
+      width: 45%;
+      border-radius: 10px;
+      height: 16px;
+      background-color: $insetColor2;
+    }
+  }
+
+  .drawer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    row-gap: 18px;
+    background-color: white;
+    left: 0;
+    z-index: 11;
+    height: 92%;
+    width: 100%;
+    padding: 22px 0 0;
+  }
+}
