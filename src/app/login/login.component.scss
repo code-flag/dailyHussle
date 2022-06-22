@@ -91,24 +91,24 @@ app-button {
 }
 
 .other-options {
+    position: absolute;
+    bottom: 100px;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
-    color: var(--app-color-main);
-    margin-top: 20px;
 
     .link {
-        color: var(--link-color-2);
-        margin-left: 5px;
+        color: var(--app-color-main);
+        padding: 10px;
+        font-weight: 600;
+        border-radius: 20px;
+
         &:active {
-            transition: 0.4s;
-            background-color: var(--app-bgcolor-main);
-            color: var(--app-color-main);
+            background-color: var(--app-color-main);
+            color: var(--app-bgcolor-main);
             opacity: 1;
         }
     }
-
 }

@@ -42,6 +42,7 @@
   --app-color-s1: #cfcfcf;
   --app-color-s2: #c7c7c7;
   --link-color: #c5ff15;
+  --link-color-2: #df8a0a;
 
   --app-icon-color-1: #df8a0a;
   --app-icon-color-2: #b4d9e5;
@@ -49,15 +50,15 @@
   --app-button-color-1: #b4d9e5; // app dark color
   --app-button-color-2: #b4d9e559; // button color on dark background
   --app-button-color-3: #df8a0a; // action button color
-
   --app-button-color-4: rgb(5, 44, 56); // action button color
   --app-button-color-5: #fff; // action button color
+  
   --box-shadow-color: #646060;
 }
 
 .light-mode {
   --app-bgcolor-main: #b4d9e5; // app main dark background color
-  --app-bgcolor-primary: #fff; // app normal page background color for
+  --app-bgcolor-primary: #f7ffff; // app normal page background color for
   --app-bgcolor-secondary: #e2f4ff; // app background after normal background color
   --app-bgcolor-secondary-2: #e2f4ff;
   --app-bgcolor-tertiary: #edf4fb; // app background color after secondary
@@ -69,8 +70,10 @@
   --app-color-s2: #303030;
 
   --link-color: rgb(56 181 201);
+  --link-color-2: #df8a0a;
 
-  --app-icon-color-1: #000;
+  // --app-icon-color-1: #000;
+  --app-icon-color-1: #df8a0a;
   --app-icon-color-2: rgb(5, 44, 56);
 
   --app-button-color-1: rgb(5, 44, 56); // app dark color
@@ -78,6 +81,5 @@
   --app-button-color-3: #df8a0a; // action button color
   --app-button-color-4: rgb(5, 44, 56); // action button color
   --app-button-color-5: #fff; // action button color
-
-  --box-shadow-color: #ccc;
+  --box-shadow-color: #d9d9d9;
 }

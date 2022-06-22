@@ -25,9 +25,18 @@ export class HomeComponent implements OnInit {
   ];
 
   public activeCat: number = 1;
+
+  theme: boolean = false;
   constructor() { }
 
-
+  toggleColorTheme() {
+    if (this.theme === false) {
+      this.theme = true;
+    }
+    else {
+      this.theme = false;
+    }
+  }
   ngOnInit() { }
 
 }

@@ -1,4 +1,4 @@
-<div [class]=" theme ? 'page-wrapper light-mode':'page-wrapper dark-mode'">
+<div [class]=" theme ? 'page-wrapper light-mode':'page-wrapper dark-mode' ">
   <!-- app color theme mode -->
   <div class="color-mode" (click)="toggleColorTheme()">
     <app-icon iconType="remix" iconName="moon-fill" iconColor="custom" iconSize="custom"></app-icon>
@@ -14,10 +14,6 @@
   <!-- form start here -->
   <div class="form-wrapper">
     <div class="input-wrapper">
-      <app-icon iconType="remix" iconName="user-line" iconColor="custom" iconSize="custom"></app-icon>
-      <input type="text" placeholder="Full name">
-    </div>
-    <div class="input-wrapper">
       <app-icon iconType="remix" iconName="mail-line" iconColor="custom" iconSize="custom"></app-icon>
       <input type="email" placeholder="Email">
     </div>
@@ -25,11 +21,14 @@
       <app-icon iconType="remix" iconName="lock-line" iconColor="custom" iconSize="custom"></app-icon>
       <input type="password" placeholder="password">
     </div>
+    <div style="width: 100%; display: flex; flex-direction: row; justify-content: flex-start; align-items: center; padding: 15px; padding-top: 0;">
+      <input type="checkbox" style="width: 25px; height: 25px"> <span style="margin-left: 10px; color: var(--app-color-p1); font-weight: 600;">Keep me sign-in</span> 
+    </div>
     <app-button buttonClass="main" buttonType="round" title="Sign in" (click)="navigateTo()"></app-button>
   </div>
 
-  <!-- other option -->
   <div class="other-options">
-    Already a user?<span class="link"> Sign-in</span>
+    <div class="link">Forgot password</div>
+    <div class="link">Sign up</div>
   </div>
 </div>

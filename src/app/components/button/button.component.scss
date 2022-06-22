@@ -1,5 +1,5 @@
 @mixin button-base {
-    width: 90%;
+    width: 98%;
     min-height: 25px;
     font-family: 'Poppins';
     margin: 2px;
@@ -51,7 +51,8 @@
 }
 
 .button-main {
-    --background: var(--app-button-color-5);
+    --background: var(--app-color-main);
+    color: var(--app-bgcolor-main);
 }
 
 .button-light {
