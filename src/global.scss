@@ -83,3 +83,44 @@
   --app-button-color-5: #fff; // action button color
   --box-shadow-color: #d9d9d9;
 }
+
+.body {
+  font-family: 'Poppins';
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: center;
+  align-items: center;
+
+  &.space-evenly {
+    justify-content: space-evenly;
+  }
+  &.space-between {
+    justify-content: space-between;
+  }
+  &.space-around {
+    justify-content: space-between;
+  }
+  &.left {
+    justify-content: left;
+    align-items: flex-start;
+  }
+  &.right {
+    align-items: flex-end;
+  }
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  &.left {
+    align-items: flex-start;
+  }
+  &.right {
+    align-items: flex-end;
+  }
+}

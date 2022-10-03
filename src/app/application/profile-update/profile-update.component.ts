@@ -10,5 +10,4 @@ export class ProfileUpdateComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
-
 }

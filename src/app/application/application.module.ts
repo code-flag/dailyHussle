@@ -15,6 +15,8 @@ import { NotificationComponent } from './notification/notification.component';
 import { AppNavigationComponent } from './app-navigation/app-navigation.component';
 import { ComponentsPageModule } from '../components/components.module';
 import { JobFeedComponent } from './job-feed/job-feed.component';
+import { ProProfileComponent } from './pro-profile/pro-profile.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   imports: [
@@ -22,7 +24,8 @@ import { JobFeedComponent } from './job-feed/job-feed.component';
     FormsModule,
     IonicModule,
     ApplicationPageRoutingModule,
-    ComponentsPageModule
+    ComponentsPageModule,
+    SwiperModule
   ],
   declarations: [
     ApplicationPage,
@@ -32,13 +35,15 @@ import { JobFeedComponent } from './job-feed/job-feed.component';
     UserProfileComponent,
     NotificationComponent,
     AppNavigationComponent,
-    JobFeedComponent
+    JobFeedComponent,
+    ProProfileComponent,
   ],
   exports: [
     ApplicationPage,
     HomeComponent,
     InboxComponent,
     ProfileUpdateComponent,
+    ProProfileComponent,
     UserProfileComponent,
     NotificationComponent,
     AppNavigationComponent,

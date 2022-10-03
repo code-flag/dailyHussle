@@ -40,6 +40,7 @@ import { SideNavigationComponent } from './side-navigation/side-navigation.compo
     SideNavigationComponent,
   ],
   exports: [
+    AppSettingsComponent,
     BottomNavigationComponent,
     RatingStarComponent,
     ButtonComponent,

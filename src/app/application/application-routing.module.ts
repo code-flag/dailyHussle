@@ -6,6 +6,7 @@ import { ProfileUpdateComponent } from './profile-update/profile-update.componen
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AppNavigationComponent } from './app-navigation/app-navigation.component';
 import { JobFeedComponent } from './job-feed/job-feed.component';
+import { ProProfileComponent } from './pro-profile/pro-profile.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,7 @@ const routes: Routes = [
         path: 'profile-update', component:ProfileUpdateComponent,
       },
       {
-        path: 'notification', component:ProfileUpdateComponent,
+        path: 'notification', component:ProProfileComponent,
       },
       {
         path: 'job-feed', component: JobFeedComponent,
