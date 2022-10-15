@@ -17,6 +17,7 @@ import { ComponentsPageModule } from '../components/components.module';
 import { JobFeedComponent } from './job-feed/job-feed.component';
 import { ProProfileComponent } from './pro-profile/pro-profile.component';
 import { SwiperModule } from 'swiper/angular';
+import { JobPostingFormComponent } from './job-posting-form/job-posting-form.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { SwiperModule } from 'swiper/angular';
     AppNavigationComponent,
     JobFeedComponent,
     ProProfileComponent,
+    JobPostingFormComponent
   ],
   exports: [
     ApplicationPage,

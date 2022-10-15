@@ -7,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserReviewComponent implements OnInit {
 
+  public ratingStars = 4;
+  public index = 0;
+  public starNumber: any = [];
+  // review date
+  public rDate: any = new Date().toISOString();
+
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    for (this.index = 1; this.index <= this.ratingStars; this.index++) {
+      this.starNumber.push(this.index);
+    }
+  }
 
 }

@@ -24,12 +24,12 @@
        </div>
        
    </div>
-  <div class="main">
+  <div class="container">
     <div class="label">Services</div>
-   <div class="category-wrapper">
+   <div class="cat-wrapper">
        <div *ngFor="let item of category">
            <div class="small-card">
-               <div [class]="activeCat == item.id? 'category m-active' : 'category'">
+               <div [class]="activeCat === item.id? 'category m-active' : 'category'">
                 <img [src]="item.image" alt="" [id]="item.id">
                </div>
                <div class="cat-title">{{item?.name}}</div>
@@ -44,24 +44,24 @@
     </div>
    </div>
    <div class="row">
-    <div class="col summary">
+    <div class="col user-summary">
         <app-icon iconType="remix" iconName="service-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
         <div class="value">45</div>
         <div class="subtitle">Projects</div>
       </div>
-     <div class="col summary">
+     <div class="col user-summary">
         <app-icon iconType="remix" iconName="hand-heart-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
         <div class="value">1520</div>
         <div class="subtitle">Reviews</div>
      </div>
    </div>
    <div class="row">
-    <div class="col summary">
+    <div class="col user-summary">
         <app-icon iconType="remix" iconName="flask-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
         <div class="value">10+</div>
         <div class="subtitle">Experience</div>
       </div>
-     <div class="col summary" (click)="controlGallery('open')">
+     <div class="col user-summary" (click)="controlGallery('open')">
         <app-icon iconType="remix" iconName="gallery-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
         <div class="value">20</div>
         <div class="subtitle">Gallery</div>

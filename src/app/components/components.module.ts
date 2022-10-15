@@ -18,6 +18,7 @@ import { JobPostCardComponent } from './job-post-card/job-post-card.component';
 import { JobPostingComponent } from './job-posting/job-posting.component';
 import { ReviewComponent } from './review/review.component';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
+import { UserReviewComponent } from './user-review/user-review.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { SideNavigationComponent } from './side-navigation/side-navigation.compo
     JobPostCardComponent,
     JobPostingComponent,
     ReviewComponent,
+    UserReviewComponent,
     SideNavigationComponent,
   ],
   exports: [

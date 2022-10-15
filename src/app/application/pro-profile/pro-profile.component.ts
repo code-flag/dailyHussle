@@ -50,6 +50,9 @@ export class ProProfileComponent implements OnInit {
       this.theme = false;
     }
   }
+  actionLinkTouch(value){
+
+  }
 
   controlGallery(event: string) {
     if (event === 'open') {

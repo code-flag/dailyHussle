@@ -1,0 +1,196 @@
+<div [class]=" theme ? 'page-wrapper light-mode':'page-wrapper dark-mode'">
+    <!-- app color theme mode -->
+    <div class="color-mode" (click)="toggleColorTheme()">
+      <app-icon iconType="remix" iconName="moon-fill" iconColor="custom" iconSize="custom"></app-icon>
+    </div>
+  
+    <!-- app logo here  -->
+    <div class="logo">
+      <div class="image">
+        <img src="../../assets/images/logo.png" alt="">
+      </div>
+    </div>
+  
+    <!-- form start here -->
+    <div class="form-wrapper">
+     <fieldset>
+      <legend>Personal details</legend>
+      <div class="input-grouping">
+        <label for="name">Full name</label>
+        <div class="input-wrapper">
+          <input type="text" name="name" placeholder="John Mark" />
+        </div>
+      </div>
+
+      
+        <label>Gender</label>
+        <div class="type">
+          <span
+            ><input
+              type="radio"
+              name="male"
+              id="male"
+              #genderOption1
+              
+            />
+            <label for="male">Male</label></span
+          >
+          <span>
+            <input
+              type="radio"
+              name="female"
+              id="female"
+              #genderOption2
+             
+            />
+            <label for="female">Female</label>
+          </span>
+        </div>
+      
+      
+      <div class="input-grouping">
+        <label for="password1">Old Password</label>
+        <div class="input-wrapper">
+          <input type="text" name="password1" placeholder="@123Abc#12" />
+        </div>
+      </div>
+      <div class="input-grouping">
+        <label for="password2">New password</label>
+        <div class="input-wrapper">
+          <input type="text" name="password2" placeholder="@123Abz#Q)" />
+        </div>
+      </div>
+     </fieldset>
+
+     <fieldset>
+      <legend>Contacts</legend>
+      <div class="input-grouping">
+        <label for="email">Email</label>
+        <div class="input-wrapper">
+          <input type="email" name="email" placeholder="example@gmail.com" />
+        </div>
+      </div>
+      <div class="input-grouping">
+        <label for="phone">Phone Number</label>
+        <div class="input-wrapper">
+          <input type="tel" name="phone" placeholder="07012546109" />
+        </div>
+      </div>
+      <div class="input-grouping">
+        <label for="address">Address</label>
+        <div class="input-wrapper">
+          <input type="text" name="address" placeholder="Location Address" />
+        </div>
+      </div>
+     </fieldset>
+
+     <fieldset>
+      <legend>About</legend>
+    
+      <div class="input-grouping">
+        <label for="about">Tell us about yourself</label>
+        <div class="text-area">
+          <textarea
+            name="about"
+            placeholder="What is this work all about"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="input-grouping">
+        <label for="state">State</label>
+        <select
+          name="state"
+          id="state"
+          class="input-wrapper"
+          style="padding: 10px"
+        >
+          <option style="padding: 10px" value="painter">FCT Abuja</option>
+          <option style="padding: 10px" value="painter">Lagos</option>
+          <option style="padding: 10px" value="painter">Oyo</option>
+          <option style="padding: 10px" value="painter">Taraba</option>
+          <option style="padding: 10px" value="painter">Niger</option>
+        </select>
+      </div>
+      <div class="input-grouping">
+        <label for="city">Town | City</label>
+        <select
+          name="city"
+          id="city"
+          class="input-wrapper"
+          style="padding: 10px"
+        >
+          <option style="padding: 10px" value="painter">Maitama</option>
+          <option style="padding: 10px" value="painter">Area 1</option>
+          <option style="padding: 10px" value="painter">Maraba</option>
+          <option style="padding: 10px" value="painter">Kubwa</option>
+          <option style="padding: 10px" value="painter">Lugbe</option>
+        </select>
+      </div>
+     </fieldset>
+     
+     <fieldset>
+      <legend>Become A job poster (Optional)</legend>
+  
+      <div class="input-grouping">
+        <label for="nin">NIN</label>
+        <div class="input-wrapper">
+          <input type="number" name="nin" placeholder="9215468784" />
+        </div>
+      </div>
+      <div class="input-grouping">
+        <label for="dob">Date of Birth</label>
+        <div class="input-wrapper">
+          <input type="date" name="dob" placeholder="" />
+        </div>
+      </div>
+
+      <div class="input-grouping">
+        <label for="industry">Industry</label>
+        <select
+          name="industry"
+          id="industry"
+          class="input-wrapper"
+          style="padding: 10px"
+        >
+          <option style="padding: 10px" value="painter">Construction</option>
+          <option style="padding: 10px" value="painter">I.T</option>
+          <option style="padding: 10px" value="painter">Hospital</option>
+          <option style="padding: 10px" value="painter">School</option>
+          <option style="padding: 10px" value="painter">Others</option>
+        </select>
+      </div>
+
+      <div class="input-grouping">
+        <label for="profession">Profession | Occupation</label>
+        <select
+          name="profession"
+          id="profession"
+          class="input-wrapper"
+          style="padding: 10px"
+        >
+          <option style="padding: 10px" value="painter">Engineer</option>
+          <option style="padding: 10px" value="painter">Technician</option>
+          <option style="padding: 10px" value="painter">Digital Marketer</option>
+          <option style="padding: 10px" value="painter">Promoter</option>
+          <option style="padding: 10px" value="painter">Mechanic</option>
+        </select>
+      </div>
+
+
+      <div class="input-grouping">
+        <label for="office-address">Office Address</label>
+        <div class="input-wrapper">
+          <input type="text" name="office-address" placeholder="No 57, freedom street, abuja" />
+        </div>
+      </div>
+
+     </fieldset>
+      <app-button buttonClass="main" buttonType="round" title="Sign in" (click)="navigateTo()"></app-button>
+    </div>
+  
+    <!-- other option -->
+    <div class="other-options">
+      Already a user?<span class="link"> Sign-in</span>
+    </div>
+  </div>

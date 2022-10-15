@@ -141,13 +141,13 @@
   }
 }
 
-.main {
+.container {
   //   width: 90%;
   position: relative;
   overflow: scroll;
   padding: 20px;
 
-  .category-wrapper {
+  .cat-wrapper {
     width: 100%;
     min-height: 15%;
     padding: 20px;
@@ -233,7 +233,7 @@
   }
 }
 
-.summary {
+.user-summary {
   background-color: var(--app-bgcolor-primary);
   border-radius: 12px;
   padding: 10px;
