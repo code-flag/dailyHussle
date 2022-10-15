@@ -34,8 +34,8 @@ export class AppNavigationComponent implements OnInit {
   };
   tabTwoValues: AppPageTabs = {
     link: "notification",
-    name: "Notification",
-    icon: "notification-line", // flow-chart shield-check-line
+    name: "Trends",
+    icon: "bar-chart-line", // flow-chart shield-check-line
     index: 2,
   };
 

@@ -1,0 +1,266 @@
+<div class="page-wrapper">
+  <div class="header">
+    Your work would be posted base on information provided.
+  </div>
+  <div class="form-wrapper">
+    <fieldset>
+      <legend>Work details</legend>
+      <div class="input-grouping">
+        <label for="title">Work Title</label>
+        <div class="input-wrapper">
+          <input type="text" name="title" placeholder="Email" />
+        </div>
+      </div>
+
+      <div class="input-grouping">
+        <label for="description">Work description</label>
+        <div class="text-area">
+          <textarea
+            name="description"
+            placeholder="What is this work all about"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="input-grouping">
+        <label for="address">Location address</label>
+        <div class="input-wrapper">
+          <input type="text" name="address" placeholder="Email" />
+        </div>
+      </div>
+      <div class="input-grouping">
+        <label for="location">Town/city</label>
+        <div class="input-wrapper">
+          <input type="text" name="location" placeholder="Email" />
+        </div>
+      </div>
+      <div class="input-grouping">
+        <label for="industry">Industry</label>
+        <select
+          name="industry"
+          id="industry"
+          class="input-wrapper"
+          style="padding: 10px"
+        >
+          <option style="padding: 10px" value="painter">Construction</option>
+          <option style="padding: 10px" value="painter">I.T</option>
+          <option style="padding: 10px" value="painter">Hospital</option>
+          <option style="padding: 10px" value="painter">School</option>
+          <option style="padding: 10px" value="painter">Others</option>
+        </select>
+      </div>
+
+      <div class="input-grouping">
+        <label for="category">Category</label>
+        <select
+          name="category"
+          id="category"
+          class="input-wrapper"
+          style="padding: 10px"
+        >
+          <option style="padding: 10px" value="painter">Painter</option>
+          <option style="padding: 10px" value="painter">Cleaner</option>
+          <option style="padding: 10px" value="painter">Electrician</option>
+          <option style="padding: 10px" value="painter">Plumber</option>
+          <option style="padding: 10px" value="painter">Mechanic</option>
+        </select>
+      </div>
+
+      <div class="input-grouping">
+        <label for="payment">Payment | Wages</label>
+        <div class="input-wrapper">
+          <input type="number" name="payment" placeholder="3000" />
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Work Duration</legend>
+      <div class="input-wrapper">
+        <label for="opening-time">Start Time</label>
+        <input type="time" name="opening-time" placeholder="Start time" />
+      </div>
+      <br />
+      <div class="input-wrapper">
+        <label for="closing-time">Closing Time</label>
+        <input type="time" name="closing-time" placeholder="closing time" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Payment Method</legend>
+      <div class="type">
+        <span
+          ><input
+            type="radio"
+            name="cash"
+            id="cash"
+            #genderOption1
+            (click)="selectPaymentMethod('cash')"
+          />
+          <label for="cash">Cash</label></span
+        >
+        <span>
+          <input
+            type="radio"
+            name="in-app"
+            id="in-app"
+            #genderOption2
+            (click)="selectPaymentMethod('in-app')"
+          />
+          <label for="in-app">In-app</label>
+        </span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Work Type</legend>
+      <div class="type">
+        <span style="margin: 5px; flex: 1"
+          ><input
+            type="radio"
+            name="remote"
+            id="remote"
+            #genderOption1
+            (click)="selectPaymentMethod('remote')"
+          />
+          <label for="remote">Remote</label></span
+        >
+        <span style="margin: 5px; flex: 1">
+          <input
+            type="radio"
+            name="on-site"
+            id="on-site"
+            #genderOption2
+            (click)="selectPaymentMethod('on-site')"
+          />
+          <label for="on-site">On-site</label>
+        </span>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Requirement</legend>
+      <fieldset>
+        <legend>Age range</legend>
+        <div class="input-wrapper">
+          <label for="min">Min</label>
+          <input type="number" name="min" placeholder="18" style="width: 50%" />
+        </div>
+        <br />
+        <div class="input-wrapper">
+          <label for="max">Max</label>
+          <input type="number" name="max" placeholder="25" style="width: 50%" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Gender</legend>
+        <div class="type">
+          <span
+            ><input
+              type="radio"
+              name="male"
+              id="male"
+              #genderOption1
+              (click)="selectPaymentMethod('male')"
+            />
+            <label for="male">Male</label></span
+          >
+          <span>
+            <input
+              type="radio"
+              name="female"
+              id="female"
+              #genderOption2
+              (click)="selectPaymentMethod('female')"
+            />
+            <label for="female">Female</label>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Education level</legend>
+        <div class="type">
+          <span
+            ><input
+              type="radio"
+              name="graduate"
+              id="graduate"
+              #genderOption1
+              (click)="selectPaymentMethod('graduate')"
+            />
+            <label for="graduate">Graduate</label></span
+          >
+          <span>
+            <input
+              type="radio"
+              name="any"
+              id="any"
+              #genderOption2
+              (click)="selectPaymentMethod('any')"
+            />
+            <label for="any">Any</label>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Computer Literacy</legend>
+        <div class="type">
+          <span style="margin: 5px; flex: 1"
+            ><input
+              type="radio"
+              name="required"
+              id="required"
+              #genderOption1
+              (click)="selectPaymentMethod('required')"
+            />
+            <label for="required">Required</label></span
+          >
+          <span style="margin: 5px; flex: 1">
+            <input
+              type="radio"
+              name="optional"
+              id="optional"
+              #genderOption2
+              (click)="selectPaymentMethod('optional')"
+            />
+            <label for="optional">Optional</label>
+          </span>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Work Period</legend>
+        <div class="type">
+          <span style="margin: 5px;  width: 100%;"
+            ><input
+              type="radio"
+              name="night"
+              id="night"
+              #genderOption1
+              (click)="selectPaymentMethod('night')"
+            />
+            <label for="night">Night Shift</label>
+            </span
+          >
+          <span style="margin: 5px;  width: 100%;">
+            <input
+              type="radio"
+              name="day"
+              id="day"
+              #genderOption2
+              (click)="selectPaymentMethod('day')"
+            />
+            <label for="day">only day</label>
+          </span>
+        </div>
+      </fieldset>
+    </fieldset>
+
+    <app-button
+      buttonClass="main"
+      buttonType="round"
+      title="Post Job"
+    ></app-button>
+  </div>
+</div>

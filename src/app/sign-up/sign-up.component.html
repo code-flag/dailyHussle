@@ -1,3 +1,35 @@
-<p>
-  sign-up works!
-</p>
+<div [class]=" theme ? 'page-wrapper light-mode':'page-wrapper dark-mode'">
+  <!-- app color theme mode -->
+  <div class="color-mode" (click)="toggleColorTheme()">
+    <app-icon iconType="remix" iconName="moon-fill" iconColor="custom" iconSize="custom"></app-icon>
+  </div>
+
+  <!-- app logo here  -->
+  <div class="logo">
+    <div class="image">
+      <img src="../../assets/images/logo.png" alt="">
+    </div>
+  </div>
+
+  <!-- form start here -->
+  <div class="form-wrapper">
+    <div class="input-wrapper">
+      <app-icon iconType="remix" iconName="user-line" iconColor="custom" iconSize="custom"></app-icon>
+      <input type="text" placeholder="Full name">
+    </div>
+    <div class="input-wrapper">
+      <app-icon iconType="remix" iconName="mail-line" iconColor="custom" iconSize="custom"></app-icon>
+      <input type="email" placeholder="Email">
+    </div>
+    <div class="input-wrapper">
+      <app-icon iconType="remix" iconName="lock-line" iconColor="custom" iconSize="custom"></app-icon>
+      <input type="password" placeholder="password">
+    </div>
+    <app-button buttonClass="main" buttonType="round" title="Sign in" (click)="navigateTo()"></app-button>
+  </div>
+
+  <!-- other option -->
+  <div class="other-options">
+    Already a user?<span class="link"> Sign-in</span>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.message-page {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+
+    .inbox-header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: var(--app-bgcolor-main);
+        color: var(--app-color-main);
+
+        span {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+
+            &:active {
+                opacity: 0.5;
+            }
+
+            &.active {
+                background-color: var(--app-color-main);
+                color: var(--app-bgcolor-main);
+            }
+        }
+    }
+    .main-area {
+        position: relative;
+        top: 100px;
+
+    }
+}

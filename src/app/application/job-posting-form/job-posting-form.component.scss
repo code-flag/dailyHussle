@@ -1,0 +1,166 @@
+.page-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--app-bgcolor-main);
+    padding: 20px;
+}
+
+.header {
+    background: #000;
+    color: #cfe1e7;
+    padding: 10px;
+    text-align: center;
+}
+
+.color-mode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    color: var(--app-color-main);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--app-bgcolor-main);
+    opacity: 0.8;
+    font-size: 16px;
+    box-shadow: 0px 0px 8px 3px var(--box-shadow-color) inset;
+
+    &:active {
+        transition: 2s;
+        background-color: var(--app-bgcolor-main);
+        color: var(--app-color-main);
+        opacity: 1;
+    }
+}
+
+app-button {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+.form-wrapper {
+    position: relative;
+    width: 98%;
+    top: 22px;
+    padding-bottom: 100px;
+    overflow-y: scroll;
+
+    fieldset {
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        legend {
+            color: #ffaa00;
+        }
+    }
+
+    label {
+    color: #ffaa00;
+    padding: 10px;
+    align-self: flex-start;
+    }
+
+    .input-grouping {
+        margin: 15px 0px;
+
+        .input-wrapper, .text-area {
+            margin-top: 4px;
+        }
+    }
+
+    .text-area {
+        width: 98%;
+        min-height: 180px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #e7f7ff;
+        color: var(--app-color-p1);
+        margin-bottom: 20px;
+        border-radius: 20px;
+        // overflow: hidden;
+        box-shadow: 0px 0px 15px 8px var(--box-shadow-color) inset;
+
+        textarea {
+            width: inherit;
+            height: 140px;
+            padding: 10px;
+            background-color: #e7f7ff;
+    color: #000;
+        }
+    }
+
+    .input-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--app-bgcolor-primary);
+        color: var(--app-color-p1);
+        border-radius: 20px;
+        // overflow: hidden;
+        box-shadow: 0px 0px 15px 8px var(--box-shadow-color) inset;
+
+        &:hover {
+            border-bottom: 2px solid var(--app-color-p1);
+        }
+
+        app-icon {
+            color: var(--app-color-s2);
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        input {
+            flex: 4;
+            // border: none;
+            outline: none;
+            padding: 10px;
+            background-color: inherit;
+            color: inherit;
+            border-radius: 20px;
+        }
+       
+    }
+}
+
+ .type {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    span {
+      color: #000;
+      border-radius: 20px;
+      padding: 5px;
+      padding-right: 10px;
+      padding-left: 10px;
+      background: var(--app-color-main);
+  
+    &:active {
+      border-radius: 10px;
+      background-color: #fff;
+    }
+    label {
+      margin-left: 2px;
+      color: #000;
+      padding: 5px;
+    }
+    }
+  }

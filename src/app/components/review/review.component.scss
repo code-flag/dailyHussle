@@ -1,0 +1,22 @@
+.r-wrapper {
+    width: 98%;
+    background-color: inherit;
+
+    label {
+        width: 100%;
+        padding: 10px;
+        font-weight: 600;
+    }
+    textarea {
+        border-radius: 10px;
+        width: 90%;
+        // background-color: aliceblue;
+        margin: 10px;
+        padding: 15px;
+        text-align: justify;
+    }
+    .limit {
+        width: 100%;
+        text-align: right;
+    }
+}

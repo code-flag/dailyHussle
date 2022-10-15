@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 /* eslint-disable quote-props */
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable no-trailing-spaces */
@@ -66,8 +67,19 @@ export class JobFeedComponent implements OnInit {
       rating: '4.9'
     }
   ];
-  constructor() { }
 
+  theme: boolean = false;
+
+  constructor() { }
+  
+ toggleColorTheme() {
+    if (this.theme === false) {
+      this.theme = true;
+    }
+    else {
+      this.theme = false;
+    }
+  }
   ngOnInit() {}
 
 }

@@ -1,0 +1,86 @@
+<ion-content [class]="theme? 'light-mode ion-content' : 'dark-mode ion-content'">
+  <div class="page-background-layer-1">
+   <div class="header">
+    <div class="back-button">
+      <app-icon iconType="remix" iconName="arrow-left-fill" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
+      <app-icon iconType="remix" iconName="notification-2-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>  
+    </div>
+       <div class="welcome-info">
+           <img src="../../../assets/avatar/avatar_nick.png" alt="user-image">
+            <div class="col left contacts">
+              <span class="rating">Rating</span>
+              <span class="name">Ayomikun Adewumi</span>
+              <span class="profession">Electrician</span>
+              <span class="number">+234 7012546109</span>
+              <div class="row space-evenly">
+                  <div class="action-button-1">
+                    <app-icon iconType="remix" iconName="phone-fill" iconColor="primary-icon" iconSize="custom" ></app-icon>  
+                  </div>
+                  <div class="action-button-2">
+                    <app-icon iconType="remix" iconName="message-3-line" iconColor="primary-icon" iconSize="custom"></app-icon>  
+                  </div>
+              </div>
+            </div>
+       </div>
+       
+   </div>
+  <div class="container">
+    <div class="label">Services</div>
+   <div class="cat-wrapper">
+       <div *ngFor="let item of category">
+           <div class="small-card">
+               <div [class]="activeCat === item.id? 'category m-active' : 'category'">
+                <img [src]="item.image" alt="" [id]="item.id">
+               </div>
+               <div class="cat-title">{{item?.name}}</div>
+           </div>
+       </div>
+   </div>
+   <div class="col left location">
+    <div class="label">Location</div>
+    <div class="row">
+      <div class="address">Beryan munich adjacent good church</div>
+      <app-icon iconType="remix" iconName="map-pin-user-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col user-summary">
+        <app-icon iconType="remix" iconName="service-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
+        <div class="value">45</div>
+        <div class="subtitle">Projects</div>
+      </div>
+     <div class="col user-summary">
+        <app-icon iconType="remix" iconName="hand-heart-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
+        <div class="value">1520</div>
+        <div class="subtitle">Reviews</div>
+     </div>
+   </div>
+   <div class="row">
+    <div class="col user-summary">
+        <app-icon iconType="remix" iconName="flask-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
+        <div class="value">10+</div>
+        <div class="subtitle">Experience</div>
+      </div>
+     <div class="col user-summary" (click)="controlGallery('open')">
+        <app-icon iconType="remix" iconName="gallery-line" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
+        <div class="value">20</div>
+        <div class="subtitle">Gallery</div>
+     </div>
+   </div>
+   <div class="label">Additional Information</div>
+   <div class="profile-details">
+
+   </div>
+   <div class="overlay" *ngIf="isViewGallery">
+    <div class="back-button">
+      <app-icon iconType="remix" iconName="arrow-left-fill" iconColor="primary-icon" iconSize="custom" (click)="controlGallery('close')"></app-icon>
+     </div>
+    <div class="content">
+      <swiper [effect]="'cards'" [grabCursor]="true" class="Swiper-wrapper">
+        <ng-template swiperSlide *ngFor="let image of gallery"><img [src]="image" alt=""></ng-template>
+      </swiper>
+    </div>
+   </div>
+  </div>
+  </div>
+</ion-content>

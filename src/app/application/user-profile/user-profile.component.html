@@ -1,3 +1,75 @@
-<div>
-  show me your love and mercy
-</div>
+<ion-content>
+  <div class="profile-page-wrapper">
+    <!-- user identity with contacts starts here -->
+      <div class="row user-identity">
+        <div class="picture">
+          <img src="../../../assets/avatar/avatar_nick.png" alt="User image">
+        </div>
+        <div class="col left contacts">
+          <hr>
+          <div class="name">John Doe</div>
+          <hr>
+          <div class="email">sample@gmail.com</div>
+          <hr>
+          <div class="number">09065614894</div>
+          <hr>
+        </div>
+      </div>
+      <!-- user rating -->
+      <div class="row space-between rating">
+        <span class="stars">Rating</span>
+        <span class="verification">Verified</span>
+      </div>
+      <!-- control tabs for summary and settings -->
+      <div class="row space-evenly control-tabs">
+        <span [class]="activeTab ? 'tab-1 active' : 'tab-1'" (click)="toggleTab('tab1')">Summary</span>
+        <span [class]="activeTab ? 'tab-2' : 'tab-2 active'" (click)="toggleTab('tab2')">Settings</span>
+      </div>
+      <!-- summary starts here -->
+      <div class="summary" *ngIf="activeTab">
+        <div class="row">
+          <div class="col">
+            <span class="review round box">25</span>
+            <div class="shadow"></div>
+            <span class="title">Review</span>
+          </div>
+          <div class="col">
+            <span class="work-done round box">5</span>
+            <div class="shadow"></div>
+            <span class="title">Work-done</span>
+          </div>
+          <div class="col">
+            <span class="level round box">2</span>
+            <div class="shadow"></div>
+            <span class="title">Level</span>
+          </div>
+        </div>
+        <div class="col links">
+          <div class="action-link" (click)="actionLinkTouch('open', 'Edit Profile')"> <app-icon iconType="remix" iconName="edit-fill" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon> Edit Profile</div>
+          <div class="action-link" (click)="actionLinkTouch('open', 'Promote Profile')"> <app-icon iconType="remix" iconName="send-plane-fill" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon> Promote Profile</div>
+          <div class="action-link" (click)="actionLinkTouch('open', 'Post a Job')"> <app-icon iconType="remix" iconName="customer-service-2-fill" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon> Post a Job</div>
+          <div class="action-link" (click)="actionLinkTouch('open', 'Support')"> <app-icon iconType="remix" iconName="slideshow-2-fill" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon> Support</div>
+          <div class="action-link" (click)="actionLinkTouch('open', 'Feedback')"> <app-icon iconType="remix" iconName="mail-send-fill" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon> Feedback</div>
+        </div>
+        
+      </div>
+      <!-- summary ends here -->
+      <div class="settings" *ngIf="!activeTab">
+        <div class="col links">
+          <div class="action-link" (click)="actionLinkTouch('open', 'Edit Profile')">Dark-mode</div>
+          <div class="action-link" (click)="actionLinkTouch('open', 'Promote Profile')">Upgrade Account</div>
+          <div class="action-link" (click)="actionLinkTouch('open', 'Post a Job')">Enable Notification</div>
+          <div class="action-link" (click)="actionLinkTouch('open', 'Support')">Sound</div>
+          <div class="action-link" (click)="actionLinkTouch('open', 'Feedback')">Others</div>
+        </div>
+      </div>
+
+      <div [class]="actionTouch ? 'slider-overlay open' : 'slider-overlay close' ">
+        <div class="header">
+          <app-icon iconType="remix" iconName="arrow-left-fill" iconColor="primary-icon" iconSize="custom" (click)="actionLinkTouch('close')"></app-icon>
+          <span>{{headerTitle}}</span>
+        </div>
+      </div>
+      
+  </div>
+</ion-content>
